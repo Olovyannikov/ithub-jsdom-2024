@@ -22,3 +22,21 @@ for (let i = 0; i < 5; i++) {
 }
 
 $('#app').insertAdjacentElement('afterbegin', table);
+
+function addRandomNumber() {
+    let number = Math.floor(Math.random() * 100);
+    numbers.push(number);
+
+    let table = document.getElementsByTagName('table')[0];
+    let rows = table.getElementsByTagName('tr');
+    let lastRow = rows[rows.length - 1];
+    let lastRowLength = lastRow.getElementsByTagName('td').length;
+    // Определяем цвет для числа
+    let color = number >= 50 ? 'orange' : 'transparent';
+    // Добавляем число в таблицу
+    if (lastRowLength <= 5) {
+        lastRow.innerHTML += `<td style="background-color: ${color}">${number}</td>`;
+    } else {
+        table.innerHTML += `<tr><td style="background-color: ${color}">${number}</td></tr>`;
+    }
+}
