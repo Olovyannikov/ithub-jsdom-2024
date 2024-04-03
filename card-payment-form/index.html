@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Card Payment</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<div class="container">
+    <form class="credit-card">
+        <div class="card front">
+            <input name="number" class="number" minlength="1" maxlength="19" placeholder="0000 0000 0000 0000" title="Card number">
+            <input name="name" class="name" maxlength="22" placeholder="GERMAN GREF" title="Card holder">
+            <div class="expiration-and-company">
+                <input name="month" class="month" type="number" maxlength="2" max="12" min="1" placeholder="MM" title="Expiration month">
+                <span>/</span>
+                <input name="year" class="year" type="number" maxlength="2" placeholder="YY" title="Expiration year">
+                <div class="company"></div>
+            </div>
+        </div>
+        <div class="card back">
+            <div class="magnet"></div>
+            <input class="cvv" maxlength="4" placeholder="000" title="CVV">
+        </div>
+        <button class="card-submit">Submit</button>
+    </form>
+    <table class="card-table">
+        <thead>
+            <tr>
+                <th>ФИО</th>
+                <th>Тип карты</th>
+                <th>Последние 4 цифры</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>
+<script src="./app.js"></script>
+</body>
+</html>

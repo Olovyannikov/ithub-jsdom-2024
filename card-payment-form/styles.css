@@ -1,0 +1,140 @@
+body {
+    background: #404040;
+    font-family: "Consolas", Courier, monospace;
+}
+
+.credit-card {
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.credit-card .card {
+    background-color: #0c7cd5;
+    transition: top 0.2s, left 0.2s, background 0.2s;
+    border-radius: 20px;
+    width: 350px;
+    height: 200px;
+    padding: 25px;
+    border: 2px solid #51adf6;
+}
+
+.credit-card .card input {
+    font-family: "Consolas", "Courier", monospace;
+    background: transparent;
+    border: none;
+    padding: 0;
+    font-size: inherit;
+    outline: none;
+    color: silver;
+}
+
+.credit-card .card input::placeholder {
+    color: silver;
+}
+
+.credit-card .card .number {
+    margin-top: 100px;
+    font-size: 28px;
+    width: 335px;
+}
+
+.credit-card .card .name {
+    font-size: 24px;
+    width: 335px;
+}
+
+.credit-card .card .expiration-and-company {
+    font-size: 24px;
+}
+
+.credit-card .card .expiration-and-company .month {
+    display: inline-block;
+    width: 30px;
+}
+
+.credit-card .card .expiration-and-company .year {
+    width: 30px;
+    display: inline-block;
+}
+
+.credit-card .card .expiration-and-company .company {
+    position: relative;
+    text-align: right;
+    display: inline-block;
+    width: 265px;
+}
+
+.credit-card .card .expiration-and-company .company img {
+    position: absolute;
+    right: -7px;
+    top: -35px;
+    width: 64px;
+    height: 64px;
+    background: rgba(0, 0, 0, 0);
+}
+
+.credit-card .card .magnet {
+    background: #000;
+    width: 400px;
+    margin-left: -25px;
+    height: 50px;
+}
+
+.credit-card .card .cvv {
+    margin-top: 15px;
+    margin-left: 250px;
+    font-size: 24px;
+}
+
+.credit-card .card.front {
+    top: 0;
+    left: 0;
+    z-index: 1;
+    box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.5);
+}
+
+.credit-card .card.back {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    z-index: -1;
+}
+
+.card-submit {
+    margin: 80px 0 0;
+    padding: 12px 15px;
+    width: 100%;
+    max-width: 454px;
+    border: 0;
+    color: #fff;
+    font-size: 28px;
+    border-radius: 25px;
+    cursor: pointer;
+    background-color: #0c7cd5;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+/* Table */
+
+.card-table {
+    display: block;
+    border-collapse: collapse;
+}
+
+.card-table:has(tbody:empty) {
+    display: none;
+}
+
+.card-table th, .card-table td {
+    border: 2px solid black;
+    padding: 20px;
+}
